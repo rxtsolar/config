@@ -1,0 +1,41 @@
+[user]
+	name = Guangyu Sun
+	email = guangyu.sun@oracle.com
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = auto
+[push]
+	default = matching
+[core]
+	#autocrlf = input
+	#safecrlf = true
+	editor = vim
+[alias]
+	co = checkout 
+	ci = commit
+	st = status
+	br = branch
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	type = cat-file -t
+	dump = cat-file -p 
+	chpx = cherry-pick -s -x
+	chps = cherry-pick -s
+	email = send-email --suppress-cc all --thread
+	uekmail = send-email --suppress-cc all --to linux-uek_ww@oracle.com --thread --annotate
+	pull-uek4 = pull --log --no-ff git://ca-git.us.oracle.com/linux-uek
+[merge]
+	conflictstyle = diff3
+[sendemail]
+	#smtpencryption = tls
+	#smtpserver = smtp.gmail.com
+	#smtpuser = sunguangyucn@gmail.com
+	#smtpserverport = 587
+	smtpencryption = ssl 
+	smtpserver = stbeehive.oracle.com
+	smtpuser = guangyu.sun@oracle.com
+	smtpserverport = 465
+	chainreplyto = false
+[credential]
+	helper = cache
